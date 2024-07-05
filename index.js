@@ -94,7 +94,7 @@ function gameOver() {
             board[r][c].element.removeEventListener('touchstart', revealCell); // Remove touch event listener
         }
     }
-    setTimeout(initGame, 5000); // Restart game after 2 seconds
+    setTimeout(initGame, 2000); // Restart game after 2 seconds
 }
 
 function updateScore() {
