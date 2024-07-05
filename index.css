@@ -1,0 +1,103 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #295979;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    height: 100vh;
+    justify-content: center;
+}
+
+h1 {
+   color: #fccf07;
+}
+#controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 100%; 
+    max-width: 300px; 
+}
+
+#controls label, #controls select, #controls button {
+    width: 100%; 
+}
+
+#controls label {
+    margin-bottom: 5px;
+}
+
+#controls select, #controls button {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#controls button {
+    background-color: #28a745;
+    color: #fff;
+    cursor: pointer;
+}
+
+#controls button:hover {
+    background-color: #218838;
+}
+
+#scoreBoard {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    text-align: center;
+    width: 100%; 
+}
+
+#gameBoard {
+    display: grid;
+    gap: 5px;
+    background-color: #2f3b52;
+    padding: 10px;
+    border-radius: 5px;
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); 
+    width: 100%; 
+    max-width: 265px;
+}
+
+.cell {
+    width: 90%;
+    padding-top: 5%; 
+    background-color: #35475e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    position: relative;
+    box-sizing: border-box; 
+}
+
+.cell::before {
+    content: '';
+    display: block;
+    padding-top: 100%; 
+}
+
+.cell.revealed {
+    background-color: #6c757d;
+    cursor: default;
+}
+
+.cell.mine img,
+.cell.safe img {
+    width: 60%; 
+    height: auto;
+}
+
+@media (min-width: 600px) {
+    #controls, #gameBoard {
+        width: 300px; /* Increase width for larger screens */
+    }
+}

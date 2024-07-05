@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minesweeper</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="controls">
+        <h1>MINESWEEPER</h1>
+        <label for="mineCount">Select the number of Mines</label>
+        <select id="mineCount">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3" selected>3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+        <button onclick="initGame()">Start</button>
+        <div id="scoreBoard">Score: 0</div>
+    </div>
+    <div id="gameBoard"></div>
+
+    <script src="index.js"></script>
+</body>
+</html>
